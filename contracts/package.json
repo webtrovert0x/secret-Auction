@@ -1,0 +1,16 @@
+{
+  "name": "secret-auction-contracts",
+  "version": "1.0.0",
+  "description": "Sealed-Bid Commit-Reveal Secret Auction Smart Contracts on BOT Chain",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network botchain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18"
+  }
+}

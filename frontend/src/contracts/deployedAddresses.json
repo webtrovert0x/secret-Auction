@@ -1,0 +1,9 @@
+{
+  "network": "botchain",
+  "chainId": 968,
+  "factoryAddress": "0x6E3866892d88d26764E06bB473DF03701c7ec6Da",
+  "mockNFTAddress": "0x69c31D1E02721dbE1eBE4D3d7CC099Fc7d31246A",
+  "initialAuctionAddress": "0x3e6D6B739bE56A1B4878B47166b66D79615B52B0",
+  "rpcUrl": "https://rpc.bohr.life",
+  "explorerUrl": "https://scan.bohr.life"
+}
