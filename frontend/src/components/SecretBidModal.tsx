@@ -12,7 +12,7 @@ import SecretAuctionABI from '@/contracts/SecretAuctionABI.json';
 
 const publicClient = createPublicClient({
   chain: botChain,
-  transport: http('https://rpc.bohr.life'),
+  transport: http('https://rpc.botchain.ai'),
 });
 
 interface SecretBidModalProps {
@@ -157,24 +157,33 @@ export function SecretBidModal({
           
           {/* Bid Amount */}
           <div>
-            <label className="block text-xs font-mono text-gray-300 uppercase mb-1.5">
-              Secret Bid Amount
-            </label>
+            <div className="flex items-center justify-between mb-1.5">
+              <label className="text-xs font-mono text-gray-300 uppercase">
+                Secret Bid Amount
+              </label>
+              <span className="text-[11px] font-mono text-emerald-400">
+                Reserve: {auction.reservePrice} BOT
+              </span>
+            </div>
             <div className="relative">
               <input
                 type="number"
                 step="any"
                 required
-                min={auction.reservePrice}
                 value={bidAmount}
                 onChange={(e) => handleBidChange(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl bg-[#0B0D13] border border-[#232A3B] focus:border-blue-500 text-white font-mono text-base outline-none pr-16"
-                placeholder={auction.reservePrice}
+                placeholder={`Min ${auction.reservePrice}`}
               />
               <span className="absolute right-4 top-3.5 text-xs font-mono font-bold text-gray-400">
                 BOT
               </span>
             </div>
+            {bidAmount && parseFloat(bidAmount) < parseFloat(auction.reservePrice) && (
+              <p className="text-[11px] font-mono text-yellow-400 mt-1">
+                ⚠️ Bid must be at least the reserve price ({auction.reservePrice} BOT).
+              </p>
+            )}
           </div>
 
           {/* Deposit Amount (Over-deposit masking) */}
@@ -190,11 +199,10 @@ export function SecretBidModal({
                 type="number"
                 step="any"
                 required
-                min={bidAmount || auction.reservePrice}
                 value={depositAmount}
                 onChange={(e) => setDepositAmount(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl bg-[#0B0D13] border border-[#232A3B] focus:border-blue-500 text-white font-mono text-base outline-none pr-16"
-                placeholder={bidAmount}
+                placeholder={bidAmount || auction.reservePrice}
               />
               <span className="absolute right-4 top-3.5 text-xs font-mono font-bold text-gray-400">
                 BOT

@@ -11,7 +11,7 @@ import SecretAuctionABI from '@/contracts/SecretAuctionABI.json';
 
 const publicClient = createPublicClient({
   chain: botChain,
-  transport: http('https://rpc.bohr.life'),
+  transport: http('https://rpc.botchain.ai'),
 });
 
 interface RevealModalProps {

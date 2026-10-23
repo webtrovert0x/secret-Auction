@@ -11,7 +11,7 @@ import { AuctionData, AuctionPhase } from '@/lib/types';
 
 const publicClient = createPublicClient({
   chain: botChain,
-  transport: http('https://rpc.bohr.life'),
+  transport: http('https://rpc.botchain.ai'),
 });
 
 const DEFAULT_NFT_IMAGES: Record<number, string> = {

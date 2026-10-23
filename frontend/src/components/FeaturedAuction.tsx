@@ -127,7 +127,7 @@ export function FeaturedAuction({
               </span>
               <span className="text-gray-600">•</span>
               <span className="text-xs font-mono text-gray-400">
-                BOT Chain Testnet
+                BOT Chain Mainnet
               </span>
             </div>
 
@@ -215,7 +215,7 @@ export function FeaturedAuction({
             <div className="flex items-center justify-between text-[11px] font-mono text-gray-400 pt-1">
               <span>Contract: {auction.address.slice(0, 8)}...{auction.address.slice(-6)}</span>
               <a
-                href={`https://scan.bohr.life/address/${auction.address}`}
+                href={`https://scan.botchain.ai/address/${auction.address}`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-cyan-400 hover:underline flex items-center gap-1"

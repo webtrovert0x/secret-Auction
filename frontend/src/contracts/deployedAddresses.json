@@ -1,9 +1,9 @@
 {
-  "network": "botchain",
-  "chainId": 968,
-  "factoryAddress": "0x6E3866892d88d26764E06bB473DF03701c7ec6Da",
-  "mockNFTAddress": "0x69c31D1E02721dbE1eBE4D3d7CC099Fc7d31246A",
-  "initialAuctionAddress": "0x3e6D6B739bE56A1B4878B47166b66D79615B52B0",
-  "rpcUrl": "https://rpc.bohr.life",
-  "explorerUrl": "https://scan.bohr.life"
+  "network": "botchain_mainnet",
+  "chainId": 677,
+  "factoryAddress": "0xA00fB6Ad5C7D4c8A39562205A45aEDe9E91B93dD",
+  "mockNFTAddress": "0x5995F44bB99BaBb4Fb44089012AC3A9def0Cd993",
+  "initialAuctionAddress": "0x0e731937a27BE3CAB73906d1611Ea9Cc73e4Fa25",
+  "rpcUrl": "https://rpc.botchain.ai",
+  "explorerUrl": "https://scan.botchain.ai"
 }

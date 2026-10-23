@@ -181,20 +181,65 @@ export default function Home() {
 
       </main>
 
-      {/* Clean Footer */}
-      <footer className="w-full py-6 border-t border-[#1E2433] bg-[#0E121B] text-xs text-gray-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div>
-            BOT Secret Auction • Factory: <a href={`https://scan.bohr.life/address/${deployedAddresses.factoryAddress}`} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline font-mono">{deployedAddresses.factoryAddress.slice(0, 8)}...{deployedAddresses.factoryAddress.slice(-6)}</a>
+      {/* Ecosystem Showcase Footer */}
+      <footer className="w-full py-8 border-t border-[#1E2433] bg-[#0E121B] text-xs text-gray-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* BOT Chain Ecosystem Info */}
+          <div className="flex items-center gap-3">
+            <img
+              src="/botchain.jpeg"
+              alt="BOT Chain Logo"
+              className="w-9 h-9 rounded-full border border-emerald-500/30 shadow-md shrink-0 object-cover"
+            />
+            <div>
+              <div className="text-sm font-bold text-white flex items-center gap-2">
+                <span>BOT Chain Ecosystem</span>
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono">
+                  Mainnet 677
+                </span>
+              </div>
+              <p className="text-[11px] text-gray-500 mt-0.5">
+                Native sealed-bid cryptographic auctions for BOT Chain digital assets.
+              </p>
+            </div>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="https://scan.bohr.life" target="_blank" rel="noreferrer" className="hover:text-gray-300 flex items-center gap-1">
-              Explorer <ExternalLink className="w-3 h-3" />
+
+          {/* Links with BOT Chain Logo at the front */}
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://botchain.ai"
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium flex items-center gap-2 transition-colors hover:border-emerald-500/50"
+            >
+              <img src="/botchain.jpeg" alt="BOT" className="w-4 h-4 rounded-full object-cover" />
+              <span>BOT Chain Website</span>
+              <ExternalLink className="w-3 h-3 text-gray-400" />
             </a>
-            <a href="https://rpc.bohr.life" target="_blank" rel="noreferrer" className="hover:text-gray-300 flex items-center gap-1">
-              RPC (968) <ExternalLink className="w-3 h-3" />
+
+            <a
+              href="https://scan.botchain.ai"
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium flex items-center gap-2 transition-colors hover:border-emerald-500/50"
+            >
+              <img src="/botchain.jpeg" alt="BOT" className="w-4 h-4 rounded-full object-cover" />
+              <span>BOT Chain Explorer</span>
+              <ExternalLink className="w-3 h-3 text-gray-400" />
+            </a>
+
+            <a
+              href={`https://scan.botchain.ai/address/${deployedAddresses.factoryAddress}#code`}
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-emerald-400 font-mono text-[11px] flex items-center gap-1.5 transition-colors hover:bg-emerald-500/10"
+            >
+              <span>Verified Factory: {deployedAddresses.factoryAddress.slice(0, 6)}...{deployedAddresses.factoryAddress.slice(-4)}</span>
+              <ExternalLink className="w-3 h-3" />
             </a>
           </div>
+
         </div>
       </footer>
 

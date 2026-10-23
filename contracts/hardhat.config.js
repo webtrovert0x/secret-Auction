@@ -15,23 +15,37 @@ module.exports = {
   },
   networks: {
     hardhat: {},
-    botchain: {
+    botchain_testnet: {
       url: "https://rpc.bohr.life",
       chainId: 968,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
+    botchain_mainnet: {
+      url: "https://rpc.botchain.ai",
+      chainId: 677,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
   etherscan: {
     apiKey: {
-      botchain: "abc",
+      botchain_testnet: "abc",
+      botchain_mainnet: "abc",
     },
     customChains: [
       {
-        network: "botchain",
+        network: "botchain_testnet",
         chainId: 968,
         urls: {
           apiURL: "https://scan.bohr.life/api",
           browserURL: "https://scan.bohr.life",
+        },
+      },
+      {
+        network: "botchain_mainnet",
+        chainId: 677,
+        urls: {
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
         },
       },
     ],

@@ -11,7 +11,7 @@ import MockNFTABI from '@/contracts/MockNFTABI.json';
 
 const publicClient = createPublicClient({
   chain: botChain,
-  transport: http('https://rpc.bohr.life'),
+  transport: http('https://rpc.botchain.ai'),
 });
 
 const ARTWORK_PRESETS = [

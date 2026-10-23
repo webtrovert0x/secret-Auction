@@ -16,7 +16,7 @@ export const wagmiAdapter = new WagmiAdapter({
   projectId,
   networks,
   transports: {
-    [botChain.id]: http('https://rpc.bohr.life'),
+    [botChain.id]: http('https://rpc.botchain.ai'),
   },
 });
 

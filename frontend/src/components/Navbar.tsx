@@ -34,8 +34,8 @@ export function Navbar({ onCreateClick, onVaultClick, onRefresh, isRefreshing }:
         
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white">
-            <Lock className="w-4 h-4" />
+          <div className="w-8 h-8 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center bg-black shrink-0">
+            <img src="/botchain.jpeg" alt="BOT Chain Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex items-center gap-2">
             <span className="text-base font-bold text-white tracking-tight">
@@ -43,7 +43,7 @@ export function Navbar({ onCreateClick, onVaultClick, onRefresh, isRefreshing }:
             </span>
             <span className="hidden sm:inline-flex text-[11px] font-mono text-gray-400 items-center gap-1.5 pl-2 border-l border-white/10">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              BOT Chain (968)
+              BOT Chain Mainnet (677)
             </span>
           </div>
         </div>

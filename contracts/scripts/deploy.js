@@ -61,14 +61,15 @@ async function main() {
   console.log("✅ Initial Secret Auction launched on-chain at:", initialAuctionAddress);
 
   // 4. Export addresses for frontend
+  const isMainnet = hre.network.name === "botchain_mainnet";
   const contractsExport = {
     network: hre.network.name,
-    chainId: hre.network.config.chainId || 968,
+    chainId: hre.network.config.chainId || (isMainnet ? 677 : 968),
     factoryAddress: factoryAddress,
     mockNFTAddress: mockNFTAddress,
     initialAuctionAddress: initialAuctionAddress,
-    rpcUrl: "https://rpc.bohr.life",
-    explorerUrl: "https://scan.bohr.life"
+    rpcUrl: isMainnet ? "https://rpc.botchain.ai" : "https://rpc.bohr.life",
+    explorerUrl: isMainnet ? "https://scan.botchain.ai" : "https://scan.bohr.life"
   };
 
   const exportPath = path.join(__dirname, "../../frontend/src/contracts/deployedAddresses.json");
