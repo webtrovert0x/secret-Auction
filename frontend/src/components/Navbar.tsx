@@ -34,8 +34,8 @@ export function Navbar({ onCreateClick, onVaultClick, onRefresh, isRefreshing }:
         
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center bg-black shrink-0">
-            <img src="/botchain.jpeg" alt="BOT Chain Logo" className="w-full h-full object-cover" />
+          <div className="w-9 h-9 rounded-xl overflow-hidden border border-emerald-500/30 flex items-center justify-center bg-black shrink-0 shadow-sm shadow-emerald-500/20">
+            <img src="/logo.jpg" alt="BOT Secret Auction Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex items-center gap-2">
             <span className="text-base font-bold text-white tracking-tight">

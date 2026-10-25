@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: 'BOT Secret Auction — Sealed-Bid NFT Marketplace on BOT Chain Mainnet',
   description: 'Cryptographic commit-reveal sealed-bid auctions on BOT Chain Mainnet (Chain ID: 677). Zero frontrunning, private bid values, and anti-griefing guarantees.',
   keywords: ['BOT Chain', 'BotChain', 'Secret Auction', 'Sealed-Bid', 'Commit Reveal', 'NFT', 'Smart Contracts'],
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
 };
 
 export default function RootLayout({
