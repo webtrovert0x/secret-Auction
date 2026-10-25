@@ -228,16 +228,6 @@ export default function Home() {
               <span>BOT Chain Explorer</span>
               <ExternalLink className="w-3 h-3 text-gray-400" />
             </a>
-
-            <a
-              href={`https://scan.botchain.ai/address/${deployedAddresses.factoryAddress}#code`}
-              target="_blank"
-              rel="noreferrer"
-              className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-emerald-400 font-mono text-[11px] flex items-center gap-1.5 transition-colors hover:bg-emerald-500/10"
-            >
-              <span>Verified Factory: {deployedAddresses.factoryAddress.slice(0, 6)}...{deployedAddresses.factoryAddress.slice(-4)}</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
 
         </div>

@@ -212,17 +212,6 @@ export function FeaturedAuction({
               </button>
             )}
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-gray-400 pt-1">
-              <span>Contract: {auction.address.slice(0, 8)}...{auction.address.slice(-6)}</span>
-              <a
-                href={`https://scan.botchain.ai/address/${auction.address}`}
-                target="_blank"
-                rel="noreferrer"
-                className="text-cyan-400 hover:underline flex items-center gap-1"
-              >
-                View on Explorer <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
           </div>
 
         </div>

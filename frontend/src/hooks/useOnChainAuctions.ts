@@ -126,7 +126,7 @@ export function useOnChainAuctions() {
             highestBid: formatEther(highestBidWei),
             nftName: `BOT Cyber Artifact #${tokenId}`,
             nftImage,
-            nftDescription: `Verified on-chain sealed-bid auction on BOT Chain. Contract: ${auctionAddr.slice(0, 6)}...${auctionAddr.slice(-4)}`,
+            nftDescription: 'Verified on-chain sealed-bid cryptographic auction on BOT Chain.',
           };
 
           return item;
